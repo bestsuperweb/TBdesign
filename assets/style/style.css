@@ -11,7 +11,12 @@
 .bg-gray{
 	background-color: #f8f8f8;
 }
-
+.text-white{
+	color: #fff;
+}
+.dropdown-menu{
+	transition: all .5s ease;
+}
 /*----- navbar ------*/
 .navbar.navbar-default{
 	padding: 10px;
@@ -145,8 +150,33 @@ footer *{
 	letter-spacing: .8px;
 }
 
+/*------Buyer Dashboard--------*/
+.buyer-dashboard{
+	margin: 50px 0;
+}
+.bdashboard-setting{
+	margin: 20px 0;
+}
 
-
+div.pull-right.dropdown.open .item-count-dropdown{
+	display: inline-flex;
+	padding: 15px;
+}
+.item-count-dropdown > label{
+	height: 30px;
+    width: 85px;
+    line-height: 33px;
+}
+.item-count-dropdown > input{
+	width: 55px;
+}
+.item-count-dropdown > button{
+	margin: 0 5px;
+	height: 34px;
+}
+.buyer-dashboard .panel .panel-heading .pull-right a{
+	margin: 0 5px;
+}
 
 /*------responsive------*/
 @media only screen and ( min-width:600px) and ( max-width:767px ){
