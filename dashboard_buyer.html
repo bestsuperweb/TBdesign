@@ -84,7 +84,7 @@
 			  <div id="bdashboard" class="tab-pane fade in active">
 			  	<div class="bdashboard-setting">
 			  		<div class="pull-right">
-				    	<button class="btn btn-default text-blue">
+				    	<button class="btn btn-default text-blue" data-toggle="modal" data-target="#bDashSettingModal">
 				    		<i class="glyphicon glyphicon-cog"></i>
 				    		Dashboard settings
 				    	</button>
@@ -320,6 +320,52 @@
 			  </div>
 			</div>
 		</div>
+
+		<!-- bDashSettingModal -->
+		  <div class="modal fade" id="bDashSettingModal" role="dialog">
+		    <div class="modal-dialog modal-sm">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title text-blue">Dashboard Settings</h4>
+		        </div>
+		        <div class="modal-body">
+		          <p class="text-muted">Widgets present on the dashboard:</p>
+		          <div class="row">
+		          	<div class="col-sm-6">
+		          		<div class="checkbox">
+				          <label><input type="checkbox" name="remember"> Current events</label>
+				        </div>
+				        <div class="checkbox">
+				          <label><input type="checkbox" name="remember"> Draft events</label>
+				        </div>
+				        <div class="checkbox">
+				          <label><input type="checkbox" name="remember"> Closed events</label>
+				        </div>
+				        <div class="checkbox">
+				          <label><input type="checkbox" name="remember"> Sandpit events</label>
+				        </div>
+		          	</div>
+		          	<div class="col-sm-6">
+		          		<div class="checkbox">
+				          <label><input type="checkbox" name="remember"> Messages</label>
+				        </div>
+				        <div class="checkbox">
+				          <label><input type="checkbox" name="remember"> Released Notes</label>
+				        </div>
+				        <div class="checkbox">
+				          <label><input type="checkbox" name="remember"> Innovational Portal</label>
+				        </div>
+		          	</div>		          	
+		          </div>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		          <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
 	</section>
 
 	<footer>
