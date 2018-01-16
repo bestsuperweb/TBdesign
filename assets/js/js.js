@@ -28,4 +28,14 @@ $(document).ready(function(){
 		}	    
 	});
 
+	$('.buyer-dashboard .panel .panel-heading .pull-right a[data-toggle="collapse"]').on('click', function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		if( $(this).children('.glyphicon').hasClass('glyphicon-minus') ){
+			$(this).children('.glyphicon').removeClass('glyphicon-minus').addClass('glyphicon-plus');
+		}else{
+			$(this).children('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
+		}
+	});
+
 });
