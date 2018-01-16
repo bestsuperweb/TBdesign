@@ -12,8 +12,8 @@
 	<link rel="stylesheet" href="assets/style/style.css">
 
 	<!--[if lt IE 9]>
-		<script src="js/html5shiv.js"></script>
-		<script src="js/respond.min.js"></script>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -38,15 +38,15 @@
 				<ul class="nav navbar-nav">
 					<li><a href="#">Company</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Supplier <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tender Solutions <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
 							<li role="presentation"><a role="menuitem" href="#">Supplier Onboarding System</a></li>
 							<li role="presentation"><a role="menuitem" href="#">Supplier Compliance Service</a></li>
-							<li role="presentation"><a role="menuitem" href="#">upplier Business Opportunities</a></li>
 							<li role="presentation" class="divider"></li>
 							<li role="presentation"><a role="menuitem" href="#">Consultance & training</a></li>
 						</ul>
 					</li>
+					<li><a href="#">Supplier Services</a></li>
 					<li><a href="#">Pricing</a></li>
 					<li><a href="#">Contact</a></li>
 					<li><a href="#">Demo</a></li>
