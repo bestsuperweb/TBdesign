@@ -177,6 +177,11 @@ div.pull-right.dropdown.open .item-count-dropdown{
 .buyer-dashboard .panel .panel-heading .pull-right a{
 	margin: 0 5px;
 }
+.char-holder{
+	width: 350px;
+	margin: 20px auto;
+}
+
 
 /*------responsive------*/
 @media only screen and ( min-width:600px) and ( max-width:767px ){

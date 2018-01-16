@@ -21,6 +21,8 @@
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/jquery.flexslider.js"></script>
 	<script src="assets/js/mousescroll.js"></script>
+	<script src="assets/js/utils.js"></script>
+	<script src="assets/js/Chart.bundle.js"></script>	
 	<script src="assets/js/js.js"></script>
 </head>
 <body>
@@ -315,8 +317,84 @@
 			  	</div>			    
 			  </div>
 			  <div id="banalytics" class="tab-pane fade">
-			    <h3>Menu 1</h3>
-			    <p>Some content in menu 1.</p>
+			  	<br><br>
+			      		
+			  	<div class="panel panel-info">
+			      <div class="panel-heading">
+			      	Event Overview by Event Type
+			      	<div class="pull-right dropdown">
+			      		<a data-toggle="dropdown" href="#" class="text-muted"><i class="glyphicon glyphicon-info-sign"></i></a>
+			      		<div class="dropdown-menu item-count-dropdown" role="menu">
+			      			<small>Event type chart<br>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</small>
+			      		</div>
+			      	</div>
+			      </div>
+			      <div id="collapse11" class="panel-collapse collapse in">
+			      	<div class="panel-body text-center">
+			      		<div class="char-holder">
+			      			<canvas id="eventOverviewChart" width="300" height="300"></canvas>
+			      		</div>			      		
+			      		<div>
+			      			<button class="btn btn-default btn-sm" id="randomizeData">Randomize Data</button>
+						    <button class="btn btn-primary btn-sm" id="addDataset">Add Dataset</button>
+						    <button class="btn btn-danger btn-sm" id="removeDataset">Remove Dataset</button>	
+			      		</div>			      		
+			      	</div>
+			      </div>
+			    </div>
+
+			    <div class="row">
+			    	<div class="col-md-6">
+			    		
+			    		<div class="panel panel-success">
+					      <div class="panel-heading">
+					      	Event Overview by Event State
+					      	<div class="pull-right dropdown">
+					      		<a data-toggle="dropdown" href="#" class="text-muted"><i class="glyphicon glyphicon-info-sign"></i></a>
+					      		<div class="dropdown-menu item-count-dropdown" role="menu">
+					      			<small>Event stat chart<br>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</small>
+					      		</div>
+					      	</div>
+					      </div>
+					      <div id="collapse12" class="panel-collapse collapse in">
+					      	<div class="panel-body text-center">
+					      		<div class="char-holder">
+					      			<canvas id="eventStatChart" width="300" height="300"></canvas>
+					      		</div>		      		
+					      	</div>
+					      </div>
+					    </div>
+
+			    	</div>
+
+			    	<div class="col-md-6">
+			    		
+			    		<div class="panel panel-success">
+					      <div class="panel-heading">
+					      	Event Overview by Event State
+					      	<div class="pull-right dropdown">
+					      		<a data-toggle="dropdown" href="#" class="text-muted"><i class="glyphicon glyphicon-info-sign"></i></a>
+					      		<div class="dropdown-menu item-count-dropdown" role="menu">
+					      			<small>Event type chart<br>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</small>
+					      		</div>
+					      	</div>
+					      </div>
+					      <div id="collapse13" class="panel-collapse collapse in">
+					      	<div class="panel-body text-center">
+					      		<div class="char-holder">
+					      			<canvas id="eventLineChart" width="300" height="300"></canvas>
+					      		</div>		      		
+					      	</div>
+					      </div>
+					    </div>
+
+			    	</div>
+
+			    </div>
+
 			  </div>
 			</div>
 		</div>
