@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TendorBook | Dashboard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/style/animate.min.css">
+	<link rel="stylesheet" href="assets/style/test-slider.css">
+	<link rel="stylesheet" href="assets/style/style.css">
+
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/jquery.flexslider.js"></script>
+	<script src="assets/js/mousescroll.js"></script>
+	<script src="assets/js/js.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+				<a class="navbar-brand" href="#"><img src="assets/img/logo.png"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="#">Company</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tender Solutions <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+							<li role="presentation"><a role="menuitem" href="#">Supplier Onboarding System</a></li>
+							<li role="presentation"><a role="menuitem" href="#">Supplier Compliance Service</a></li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation"><a role="menuitem" href="#">Consultance & training</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Supplier Services</a></li>
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Demo</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown" >
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+							<span class="glyphicon glyphicon-user"></span> 
+							David Z. <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+							<li role="presentation"><a role="menuitem" href="#">Profile</a></li>
+							<li role="presentation"><a role="menuitem" href="#">Payments</a></li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation">
+								<a role="menuitem" href="#">
+									<span class="glyphicon glyphicon-log-out"></span> Log Out
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section class="buyer-dashboard">
+		<div class="container">
+			<ul class="nav nav-tabs">
+			  <li class="active"><a data-toggle="tab" href="#bdashboard">Dashboard</a></li>
+			  <li><a data-toggle="tab" href="#banalytics">Analytics</a></li>
+			</ul>
+
+			<div class="tab-content">
+			  <div id="bdashboard" class="tab-pane fade in active">
+			  	<div class="bdashboard-setting">
+			  		<div class="pull-right">
+				    	<button class="btn btn-default text-blue">
+				    		<i class="glyphicon glyphicon-cog"></i>
+				    		Dashboard settings
+				    	</button>
+				    </div>
+				    <div class="clearfix"></div>
+			  	</div>
+			  	<div class="row">
+			  		<div class="col-md-6">
+			  			<div class="panel panel-info">
+					      <div class="panel-heading">
+					      	Current events
+					      	<div class="pull-right dropdown">
+					      		<a data-toggle="dropdown" href="#" class="text-muted"><i class="glyphicon glyphicon-cog"></i></a>
+					      		<div class="dropdown-menu item-count-dropdown" role="menu">
+					      			<label class="text-blue">Item Count:</label><input type="number" value="5" class="form-control">
+						      		<button class="btn btn-default">Save</button>					      			
+					      		</div>
+					      		<a data-toggle="collapse" href="#collapse1" class="text-muted"><i class="glyphicon glyphicon-minus"></i></a>
+					      		<a onclick="javascript:confirm('Do you really want to delete this widget? If you want it back on your dashboard, just go to your user profile page.')" class="text-muted"><i class="glyphicon glyphicon-remove"></i></a>
+					      	</div>
+					      </div>
+					      <div id="collapse1" class="panel-collapse collapse in">
+					      	<div class="panel-body">
+					      		<p>Any sourcing events you have published to the market will be listed here. Get started by creating a new event below.</p>
+					      		<hr>
+					      		<button class="btn btn-default">See all</button>
+					      	</div>
+					      </div>
+					    </div>
+
+					    <div class="panel panel-danger">
+					      <div class="panel-heading">
+					      	Draft events
+					      	<div class="pull-right dropdown">
+					      		<a data-toggle="dropdown" href="#" class="text-muted"><i class="glyphicon glyphicon-cog"></i></a>
+					      		<div class="dropdown-menu item-count-dropdown" role="menu">
+					      			<label class="text-blue">Item Count:</label><input type="number" value="5" class="form-control">
+						      		<button class="btn btn-default">Save</button>					      			
+					      		</div>
+					      		<a data-toggle="collapse" href="#collapse2" class="text-muted"><i class="glyphicon glyphicon-minus"></i></a>
+					      		<a onclick="javascript:confirm('Do you really want to delete this widget? If you want it back on your dashboard, just go to your user profile page.')" class="text-muted"><i class="glyphicon glyphicon-remove"></i></a>
+					      	</div>
+					      </div>
+					      <div id="collapse2" class="panel-collapse collapse in">
+					      	<div class="panel-body">
+					      		<div class="table-responsive">
+					      			<table class="table">
+					      				<tr>
+					      					<td><a href="#">Test Event5</a> ID: 30820</td>
+					      					<td>Questionaries</td>
+					      					<td>Questionnaire Deadline: January 31, 2018 13:45 GMT</td>
+					      				</tr>
+					      				<tr>
+					      					<td><a href="#">Test Event4</a> ID: 30819</td>
+					      					<td>Questionaries</td>
+					      					<td>Questionnaire Deadline: January 31, 2018 13:45 GMT</td>
+					      				</tr>
+					      				<tr>
+					      					<td><a href="#">Test Event3</a> ID: 30818</td>
+					      					<td>Questionnaire + Qual. Bids + Auction</td>
+					      					<td>2nd qu Deadline: January 19, 2018 23:48 GMT</td>
+					      				</tr>
+					      				<tr>
+					      					<td><a href="#">Test Event2</a> ID: 30817</td>
+					      					<td>Questionaries</td>
+					      					<td>Questionnaire Deadline: January 31, 2018 13:45 GMT</td>
+					      				</tr>
+					      				<tr>
+					      					<td><a href="#">Test Event1</a> ID: 30816</td>
+					      					<td>Questionnaire + Qual. Bids + Auction</td>
+					      					<td>2nd qu Deadline: January 19, 2018 23:48 GMT</td>
+					      				</tr>
+					      			</table>
+					      		</div>
+					      		<hr>
+					      		<div class="dropdown">
+									<button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">
+										<i class="glyphicon glyphicon-edit"></i> New Event <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li><a href="#">New Event</a></li>
+										<li><a href="#">Clone Event</a></li>
+									</ul>								  
+					      			<button class="btn btn-default">See all</button>
+								</div>
+					      	</div>
+					      </div>
+					    </div>
+
+					    <div class="panel panel-default">
+					      <div class="panel-heading">
+					      	Closed events
+					      	<div class="pull-right dropdown">
+					      		<a data-toggle="dropdown" href="#" class="text-muted"><i class="glyphicon glyphicon-cog"></i></a>
+					      		<div class="dropdown-menu item-count-dropdown" role="menu">
+					      			<label class="text-blue">Item Count:</label><input type="number" value="5" class="form-control">
+						      		<button class="btn btn-default">Save</button>					      			
+					      		</div>
+					      		<a data-toggle="collapse" href="#collapse3" class="text-muted"><i class="glyphicon glyphicon-minus"></i></a>
+					      		<a onclick="javascript:confirm('Do you really want to delete this widget? If you want it back on your dashboard, just go to your user profile page.')" class="text-muted"><i class="glyphicon glyphicon-remove"></i></a>
+					      	</div>
+					      </div>
+					      <div id="collapse3" class="panel-collapse collapse in">
+					      	<div class="panel-body">
+					      		<p>Any events that are completed and have been manually closed or were completed more than 10 days ago will be listed here.</p>
+					      		<hr>
+					      		<button class="btn btn-default">See all</button>
+					      	</div>
+					      </div>
+					    </div>
+
+					    <div class="panel panel-warning">
+					      <div class="panel-heading">
+					      	Sandpit events
+					      	<div class="pull-right dropdown">
+					      		<a data-toggle="dropdown" href="#" class="text-muted"><i class="glyphicon glyphicon-cog"></i></a>
+					      		<div class="dropdown-menu item-count-dropdown" role="menu">
+					      			<label class="text-blue">Item Count:</label><input type="number" value="5" class="form-control">
+						      		<button class="btn btn-default">Save</button>					      			
+					      		</div>
+					      		<a data-toggle="collapse" href="#collapse4" class="text-muted"><i class="glyphicon glyphicon-minus"></i></a>
+					      		<a onclick="javascript:confirm('Do you really want to delete this widget? If you want it back on your dashboard, just go to your user profile page.')" class="text-muted"><i class="glyphicon glyphicon-remove"></i></a>
+					      	</div>
+					      </div>
+					      <div id="collapse4" class="panel-collapse collapse in">
+					      	<div class="panel-body">
+					      		<p>Within the Sandpit you can experience our software as both a Host and multiple Participants at the same time to let you experiment with our software. Give it a try below.</p>
+					      		<hr>
+					      		<button class="btn btn-danger">Join Sandpit</button>
+					      	</div>
+					      </div>
+					    </div>
+
+			  		</div>
+			  		<div class="col-md-6">
+
+			  			<div class="panel panel-success">
+					      <div class="panel-heading">
+					      	Messages
+					      	<div class="pull-right dropdown">
+					      		<a data-toggle="dropdown" href="#" class="text-muted"><i class="glyphicon glyphicon-cog"></i></a>
+					      		<div class="dropdown-menu item-count-dropdown" role="menu">
+					      			<label class="text-blue">Item Count:</label><input type="number" value="5" class="form-control">
+						      		<button class="btn btn-default">Save</button>					      			
+					      		</div>
+					      		<a data-toggle="collapse" href="#collapse5" class="text-muted"><i class="glyphicon glyphicon-minus"></i></a>
+					      		<a onclick="javascript:confirm('Do you really want to delete this widget? If you want it back on your dashboard, just go to your user profile page.')" class="text-muted"><i class="glyphicon glyphicon-remove"></i></a>
+					      	</div>
+					      </div>
+					      <div id="collapse5" class="panel-collapse collapse in">
+					      	<div class="panel-body">
+					      		<p>Any messages that you have sent or received will be listed here.</p>
+					      	</div>
+					      </div>
+					    </div>
+
+					    <div class="panel panel-default">
+					      <div class="panel-heading">
+					      	Released Notes
+					      	<div class="pull-right dropdown">
+					      		<a data-toggle="dropdown" href="#" class="text-muted"><i class="glyphicon glyphicon-cog"></i></a>
+					      		<div class="dropdown-menu item-count-dropdown" role="menu">
+					      			<label class="text-blue">Item Count:</label><input type="number" value="5" class="form-control">
+						      		<button class="btn btn-default">Save</button>					      			
+					      		</div>
+					      		<a data-toggle="collapse" href="#collapse6" class="text-muted"><i class="glyphicon glyphicon-minus"></i></a>
+					      		<a onclick="javascript:confirm('Do you really want to delete this widget? If you want it back on your dashboard, just go to your user profile page.')" class="text-muted"><i class="glyphicon glyphicon-remove"></i></a>
+					      	</div>
+					      </div>
+					      <div id="collapse6" class="panel-collapse collapse in">
+					      	<div class="panel-body">
+					      		<div class="well">
+					      			<h4>New Release - August 2017 - <span class="label label-success">Mark as read</span></h4>
+		      						<small class="text-muted pull-right">September 01, 2017 13:40</small>
+		      						<div class="clearfix"></div>
+		      						<hr>
+		      						<p class="text-muted">
+		      							Market Dojo are delighted to announce <a href="#">Host-to-Host Messaging</a>
+		      						</p>
+					      		</div>
+					      		<div class="well">
+					      			<h4>New Release - October 2017 - <span class="label label-success">Mark as read</span></h4>
+		      						<small class="text-muted pull-right">October 10, 2017 17:07</small>
+		      						<div class="clearfix"></div>
+		      						<hr>
+		      						<p class="text-muted">
+		      							Read about our <a href="#">October Release</a>
+		      						</p>
+					      		</div>
+					      		<div class="well">
+					      			<h4>New Release - November 2017 - <span class="label label-success">Mark as read</span></h4>
+		      						<small class="text-muted pull-right">SNovember 01, 2017 18:01</small>
+		      						<div class="clearfix"></div>
+		      						<hr>
+		      						<p class="text-muted">
+		      							This month - <a href="#">Document Security</a>
+		      						</p>
+					      		</div>
+
+					      	</div>
+					      </div>
+					    </div>
+
+					    <div class="panel panel-danger">
+					      <div class="panel-heading">
+					      	Innovational portal
+					      	<div class="pull-right dropdown">
+					      		<a data-toggle="dropdown" href="#" class="text-muted"><i class="glyphicon glyphicon-cog"></i></a>
+					      		<div class="dropdown-menu item-count-dropdown" role="menu">
+					      			<label class="text-blue">Item Count:</label><input type="number" value="5" class="form-control">
+						      		<button class="btn btn-default">Save</button>					      			
+					      		</div>
+					      		<a data-toggle="collapse" href="#collapse7" class="text-muted"><i class="glyphicon glyphicon-minus"></i></a>
+					      		<a onclick="javascript:confirm('Do you really want to delete this widget? If you want it back on your dashboard, just go to your user profile page.')" class="text-muted"><i class="glyphicon glyphicon-remove"></i></a>
+					      	</div>
+					      </div>
+					      <div id="collapse7" class="panel-collapse collapse in">
+					      	<div class="panel-body">
+					      		<p>Welcome to the Innovation Portal, our unique tool to request, collect and prioritise ideas from your supply chain. Begin by creating your own 'Topic' now.</p>
+					      		<hr>
+					      		<button class="btn btn-danger">New Topic</button>
+					      	</div>
+					      </div>
+					    </div>
+
+
+			  		</div>
+			  	</div>			    
+			  </div>
+			  <div id="banalytics" class="tab-pane fade">
+			    <h3>Menu 1</h3>
+			    <p>Some content in menu 1.</p>
+			  </div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container text-center">
+			<img src="assets/img/favicon.png" class="footer-logo">
+			<p class="text-blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div class="footer-navigation">
+				<a href="#">About Us</a> | 
+				<a href="#">Contact Us</a> | 
+				<a href="#">Privacy Policy</a> | 
+				<a href="#">Terms of Use</a>
+			</div>
+			<div class="social-icons">
+				<ul>
+					<li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li>
+					<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> 
+					<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+					<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a class="tumblr" href="#"><i class="fa fa-tumblr-square"></i></a></li>
+				</ul>
+			</div>
+			<div class="text-muted copyright">Copyright&copy;TendorBooks, All right reserved.</div>			
+		</div>
+	</footer>
+
+</body>
+</html>
+
+
+<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
