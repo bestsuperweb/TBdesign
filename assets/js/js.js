@@ -38,6 +38,10 @@ $(document).ready(function(){
 		}
 	});
 
+	if ($('.input-date')) {
+		$('.input-date').datepicker({ });
+	}
+
 	// charts
 
 	if ($('#eventOverviewChart').length) {
