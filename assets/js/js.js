@@ -28,7 +28,7 @@ $(document).ready(function(){
 		}	    
 	});
 
-	$('.buyer-dashboard .panel .panel-heading .pull-right a[data-toggle="collapse"]').on('click', function(event) {
+	$('.market-dashboard .panel .panel-heading .pull-right a[data-toggle="collapse"]').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */
 		if( $(this).children('.glyphicon').hasClass('glyphicon-minus') ){
@@ -38,9 +38,11 @@ $(document).ready(function(){
 		}
 	});
 
-	if ($('.input-date')) {
+	if ($('.input-date').length) {
 		$('.input-date').datepicker({ });
 	}
+
+	$('[data-toggle="tooltip"]').tooltip(); 
 
 	// charts
 

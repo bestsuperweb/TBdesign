@@ -150,8 +150,26 @@ footer *{
 	letter-spacing: .8px;
 }
 
-/*------Buyer Dashboard--------*/
-.buyer-dashboard{
+
+/*--------Sim Dojo New Event--------*/
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}
+.questionary-title span.pull-right{
+	margin-top: -15px;
+}
+
+/*-----Sim Dojo Dashboard------*/
+
+.event-title{
+	font-size: 25px;
+	vertical-align: bottom;
+	margin-left: 10px;
+}
+
+/*------Market Dojo Dashboard--------*/
+.market-dashboard{
 	margin: 50px 0;
 }
 .bdashboard-setting{
@@ -174,7 +192,7 @@ div.pull-right.dropdown.open .item-count-dropdown{
 	margin: 0 5px;
 	height: 34px;
 }
-.buyer-dashboard .panel .panel-heading .pull-right a{
+.market-dashboard .panel .panel-heading .pull-right a{
 	margin: 0 5px;
 }
 .char-holder{
