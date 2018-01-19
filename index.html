@@ -46,7 +46,12 @@
 							<li role="presentation"><a role="menuitem" href="#">Consultance & training</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Supplier Services</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Supplier Services <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+							<li role="presentation"><a href="#" role="menuitem">Business Opportunities</a></li>
+						</ul>
+					</li>
 					<li><a href="#">Pricing</a></li>
 					<li><a href="#">Contact</a></li>
 					<li><a href="#">Demo</a></li>
@@ -62,8 +67,8 @@
 	<section>
 		<div class="container">
 			<div class="text-center home-banner">
-				<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
-				<p class="text-blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<h1>It’s About Time You Kick Out The Old Tender Box At Your Reception</h1>
+				<p class="text-blue">Tenderbooks is a Supplier information management solution that helps you meet the rising challenges of managing supplier risk & compliance by Automating the supplier pre-qualification process to help you run a <b>Paperless pre-qualification & evaluation process.</b></p>
 				<div id="myCarousel" class="carousel slide wow fadeInUp" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="item active">
@@ -94,29 +99,29 @@
 	<section id="testimonial">
       <div class="container">
         <div class="testimonial-heading">
-              <h1>What our customer say about us?</h1>
+              <h1>Solutions We Provide to Procuring Entities</h1>
             </div><!--testimonial-heading-->
 
             <div class="flexslider1">
               <ul class="slides new-slides">
                 <li data-thumb="assets/img/home/testimations/test-1.png">
-                    <p>Lorem ipsum dolor sit amet, quam mi. Enim diam molestie scelerisque habitant vestibulum ut, ornare quisque libero a. Montes penatibus, venenatis elit doloribus, sit nulla ut dapibus vestibulum.
-                      <span>Lorraine Anderson</span>
+                    <p>Tenderbooks is a powerfull procurement, supplier onboarding, Supplier diversity and compliance software.
+                      <span>SUPPLIER MANAGEMENT</span>
                     </p>
                 </li>
                 <li data-thumb="assets/img/home/testimations/test-2.png">
-                    <p>Lorem ipsum dolor sit amet, quam mi. Enim diam molestie scelerisque habitant vestibulum ut, ornare quisque libero a. Montes penatibus, venenatis elit doloribus, sit nulla ut dapibus vestibulum.
-                      <span>Lorraine Anderson</span>
+                    <p>Tenderbooks provides you with a branded supplier self-registration and pre-qualification portal that easily converts your paper-based pre-qualification document into digital format where suppliers can easily take part in your supplier registration process and you as the procuring entity can easily evaluate the suppliers submissions.
+                      <span>SUPPLIER ENABLEMENT</span>
                     </p>
                 </li>
                 <li data-thumb="assets/img/home/testimations/test-3.png">
-                    <p>Lorem ipsum dolor sit amet, quam mi. Enim diam molestie scelerisque habitant vestibulum ut, ornare quisque libero a. Montes penatibus, venenatis elit doloribus, sit nulla ut dapibus vestibulum.
-                      <span>Lorraine Anderson</span>
+                    <p>A single non-compliant vendor could cost you thousands and damage your reputation. For example awarding a tender to a supplier who was pre-qualified last year but at the moment some of his documents have expired. Tenderbooks gives you an early warning if any suppliers’ documents have expired or show any signs of red flags.
+                      <span>SUPPLIER COMPLIANCE</span>
                     </p>
                 </li>
                 <li data-thumb="assets/img/home/testimations/test-4.png">
-                    <p>Lorem ipsum dolor sit amet, quam mi. Enim diam molestie scelerisque habitant vestibulum ut, ornare quisque libero a. Montes penatibus, venenatis elit doloribus, sit nulla ut dapibus vestibulum.
-                      <span>Lorraine Anderson</span>
+                    <p>Automated supplier pre-qualification with tenderbooks saves your team countless hours when evaluating new suppliers. Our Solution also helps you track expired supplier documents long after the pre-qualification process was completed.
+                      <span>AUTOMATED SUPPLIER  PRE-QUALIFICATION</span>
                     </p>
                 </li>
                 <li data-thumb="assets/img/home/testimations/test-5.png">
