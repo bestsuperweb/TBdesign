@@ -177,6 +177,9 @@ footer *{
 	font-weight: 400;
 	font-size: 13px;
 }
+#bdocument .alert{
+	margin-bottom: 0;
+}
 /*------Market Dojo Dashboard--------*/
 .market-dashboard{
 	margin: 50px 0;
