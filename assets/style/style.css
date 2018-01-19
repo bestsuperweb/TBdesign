@@ -167,7 +167,16 @@ footer *{
 	vertical-align: bottom;
 	margin-left: 10px;
 }
-
+.bparticipant-top{
+	margin: 20px 0;
+}
+.multiselect-container.dropdown-menu>li>a{
+	padding: 1px 30px;
+}
+.multiselect-container.dropdown-menu>li>a>label{
+	font-weight: 400;
+	font-size: 13px;
+}
 /*------Market Dojo Dashboard--------*/
 .market-dashboard{
 	margin: 50px 0;

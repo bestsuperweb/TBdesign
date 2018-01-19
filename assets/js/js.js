@@ -42,7 +42,13 @@ $(document).ready(function(){
 		$('.input-date').datepicker({ });
 	}
 
-	$('[data-toggle="tooltip"]').tooltip(); 
+	if ($('[data-toggle="tooltip"]').length) {
+		$('[data-toggle="tooltip"]').tooltip();	
+	}
+	
+	if ($('.multi-select').length) {
+		$('.multi-select').multiselect();
+	}
 
 	// charts
 
@@ -121,8 +127,7 @@ $(document).ready(function(){
 	    document.getElementById('removeDataset').addEventListener('click', function() {
 	        config.data.datasets.splice(0, 1);
 	        window.myPie.update();
-	    });
-    
+	    });    
 	}
 
 	if ($('#eventStatChart').length) {
@@ -193,8 +198,352 @@ $(document).ready(function(){
 		        }
 		    }
 		});
-
 	}
 
+	if ($('#invitation-chart').length) {
+		Highcharts.chart('invitation-chart', {
+		    chart: {
+		        plotBackgroundColor: null,
+		        plotBorderWidth: 0,
+		        plotShadow: false
+		    },
+		    title: {
+		        text: 'Accepted<br>Invite',
+		        align: 'center',
+		        verticalAlign: 'middle',
+		        y: 40
+		    },
+		    tooltip: {
+		        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		    },
+		    plotOptions: {
+		        pie: {
+		            dataLabels: {
+		                enabled: true,
+		                distance: -50,
+		                style: {
+		                    fontWeight: 'bold',
+		                    color: 'white'
+		                }
+		            },
+		            startAngle: -90,
+		            endAngle: 90,
+		            center: ['50%', '75%']
+		        }
+		    },
+		    series: [{
+		        type: 'pie',
+		        name: 'Invite',
+		        innerSize: '50%',
+		        data: [
+		            ['Accepted',   5],
+		            ['Not accepted',     5]
+		        ]
+		    }]
+		});
+
+		$('#invitation-chart1').highcharts({
+	        chart: {
+	            type: 'pie',
+	            options3d: {
+					enabled: true,
+	                alpha: 60,
+	                beta: 0,
+	            }
+	        },
+	        title: {
+		        text: '...'
+		    },
+	        plotOptions: {
+	            pie: {
+	                depth: 45
+	            }
+	        },
+	        series: [{
+	        	name: 'Invite',
+	            data: [
+	            	['Accepted',   1],
+		            ['Not accepted',     2]
+	            ]
+	        }]
+	    });
+	}
+
+	if ($('#submission-chart').length) {
+		Highcharts.chart('submission-chart', {
+		    chart: {
+		        plotBackgroundColor: null,
+		        plotBorderWidth: 0,
+		        plotShadow: false
+		    },
+		    title: {
+		        text: 'Complete<br>Submissions',
+		        align: 'center',
+		        verticalAlign: 'middle',
+		        y: 40
+		    },
+		    tooltip: {
+		        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		    },
+		    plotOptions: {
+		        pie: {
+		            dataLabels: {
+		                enabled: true,
+		                distance: -50,
+		                style: {
+		                    fontWeight: 'bold',
+		                    color: 'white'
+		                }
+		            },
+		            startAngle: -90,
+		            endAngle: 90,
+		            center: ['50%', '75%']
+		        }
+		    },
+		    series: [{
+		        type: 'pie',
+		        name: 'Submissions',
+		        innerSize: '50%',
+		        data: [
+		            ['Complete',   7],
+		            ['Incomplete',  3]
+		        ]
+		    }]
+		});
+
+		$('#submission-chart1').highcharts({
+	        chart: {
+	            type: 'pie',
+	            options3d: {
+					enabled: true,
+	                alpha: 60,
+	                beta: 0,
+	            }
+	        },
+	        title: {
+		        text: '...'
+		    },
+	        plotOptions: {
+	            pie: {
+	                depth: 45
+	            }
+	        },
+	        series: [{
+	        	name: 'Submissin',
+	            data: [
+	            	['Not submitted anything',   1],
+		            ['Submission in progress',     2]
+	            ]
+	        }]
+	    });
+	}
+
+	if ($('#scoring-chart').length) {
+		Highcharts.chart('scoring-chart', {
+		    chart: {
+		        plotBackgroundColor: null,
+		        plotBorderWidth: 0,
+		        plotShadow: false
+		    },
+		    title: {
+		        text: 'Submissin<br>Scored',
+		        align: 'center',
+		        verticalAlign: 'middle',
+		        y: 40
+		    },
+		    tooltip: {
+		        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		    },
+		    plotOptions: {
+		        pie: {
+		            dataLabels: {
+		                enabled: true,
+		                distance: -50,
+		                style: {
+		                    fontWeight: 'bold',
+		                    color: 'white'
+		                }
+		            },
+		            startAngle: -90,
+		            endAngle: 90,
+		            center: ['50%', '75%']
+		        }
+		    },
+		    series: [{
+		        type: 'pie',
+		        name: 'Submissin',
+		        innerSize: '50%',
+		        data: [
+		            ['Scored',   4],
+		            ['Not scored',  6]
+		        ]
+		    }]
+		});
+
+		$('#scoring-chart1').highcharts({
+	        chart: {
+	            type: 'pie',
+	            options3d: {
+					enabled: true,
+	                alpha: 60,
+	                beta: 0,
+	            }
+	        },
+	        title: {
+		        text: '...'
+		    },
+	        plotOptions: {
+	            pie: {
+	                depth: 45
+	            }
+	        },
+	        series: [{
+	        	name: 'Submissin',
+	            data: [
+	            	['Submission not scored',   1],
+		            ['Scoring in progress',     2]
+	            ]
+	        }]
+	    });
+	}
+
+	if ($('#sim-chart').length) {
+		Highcharts.chart('sim-chart', {
+		    chart: {
+		        plotBackgroundColor: null,
+		        plotBorderWidth: 0,
+		        plotShadow: false
+		    },
+		    title: {
+		        text: 'Sim<br>Approved',
+		        align: 'center',
+		        verticalAlign: 'middle',
+		        y: 40
+		    },
+		    tooltip: {
+		        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		    },
+		    plotOptions: {
+		        pie: {
+		            dataLabels: {
+		                enabled: true,
+		                distance: -50,
+		                style: {
+		                    fontWeight: 'bold',
+		                    color: 'white'
+		                }
+		            },
+		            startAngle: -90,
+		            endAngle: 90,
+		            center: ['50%', '75%']
+		        }
+		    },
+		    series: [{
+		        type: 'pie',
+		        name: 'Sim',
+		        innerSize: '50%',
+		        data: [
+		            ['Approved',   8],
+		            ['Not Approved',    2]
+		        ]
+		    }]
+		});
+
+		$('#sim-chart1').highcharts({
+	        chart: {
+	            type: 'pie',
+	            options3d: {
+					enabled: true,
+	                alpha: 60,
+	                beta: 0,
+	            }
+	        },
+	        title: {
+		        text: '...'
+		    },
+	        plotOptions: {
+	            pie: {
+	                depth: 45
+	            }
+	        },
+	        series: [{
+	        	name: 'Sim',
+	            data: [
+	            	['Pending approvals',   1],
+		            ['Decision required',     2]
+	            ]
+	        }]
+	    });
+	}
+
+	if ($('#decision-chart').length) {
+		Highcharts.chart('decision-chart', {
+		    chart: {
+		        plotBackgroundColor: null,
+		        plotBorderWidth: 0,
+		        plotShadow: false
+		    },
+		    title: {
+		        text: 'Decision<br>Made',
+		        align: 'center',
+		        verticalAlign: 'middle',
+		        y: 40
+		    },
+		    tooltip: {
+		        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		    },
+		    plotOptions: {
+		        pie: {
+		            dataLabels: {
+		                enabled: true,
+		                distance: -50,
+		                style: {
+		                    fontWeight: 'bold',
+		                    color: 'white'
+		                }
+		            },
+		            startAngle: -90,
+		            endAngle: 90,
+		            center: ['50%', '75%']
+		        }
+		    },
+		    series: [{
+		        type: 'pie',
+		        name: 'Decision',
+		        innerSize: '50%',
+		        data: [
+		            ['Made',   5],
+		            ['Not made',     5]
+		        ]
+		    }]
+		});
+
+		$('#decision-chart1').highcharts({
+	        chart: {
+	            type: 'pie',
+	            options3d: {
+					enabled: true,
+	                alpha: 60,
+	                beta: 0,
+	            }
+	        },
+	        title: {
+		        text: '...'
+		    },
+	        plotOptions: {
+	            pie: {
+	                depth: 45
+	            }
+	        },
+	        series: [{
+	        	name: 'Decision',
+	            data: [
+	            	['Decision reqruied',   1],
+		            ['Approved',     2],
+		            ['Rejected',     3]
+	            ]
+	        }]
+	    });
+	}
 
 });

@@ -7,7 +7,7 @@
 	<link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.min.css">
+	<link ref="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
 	<link rel="stylesheet" href="assets/style/animate.min.css">
 	<link rel="stylesheet" href="assets/style/test-slider.css">
 	<link rel="stylesheet" href="assets/style/style.css">
@@ -19,12 +19,13 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/jquery.flexslider.js"></script>
 	<script src="assets/js/mousescroll.js"></script>
-	<script src="assets/js/utils.js"></script>
-	<script src="assets/js/Chart.bundle.js"></script>	
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<script src="assets/js/js.js"></script>
 </head>
 <body>
@@ -126,25 +127,279 @@
 			  		<h4 class="text-muted">Invitations</h4>
 			  		<div class="row">
 			  			<div class="col-sm-6">
-			  				<h2>In progress: 0</h2>
+			  				<div id="invitation-chart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 			  			</div>
 			  			<div class="col-sm-6">
-			  				<h2>Complete: 0</h2>
+			  				<div id="invitation-chart1" style="height: 400px"></div>
+			  			</div>
+			  		</div>
+			  	</div>
+			  	<div class="well">
+			  		<h4 class="text-muted">Submissions</h4>
+			  		<div class="row">
+			  			<div class="col-sm-6">
+			  				<div id="submission-chart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+			  			</div>
+			  			<div class="col-sm-6">
+			  				<div id="submission-chart1" style="height: 400px"></div>
+			  			</div>
+			  		</div>
+			  	</div>
+			  	<div class="well">
+			  		<h4 class="text-muted">Scoring</h4>
+			  		<div class="row">
+			  			<div class="col-sm-6">
+			  				<div id="scoring-chart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+			  			</div>
+			  			<div class="col-sm-6">
+			  				<div id="scoring-chart1" style="height: 400px;"></div>
+			  			</div>
+			  		</div>
+			  	</div>
+			  	<div class="well">
+			  		<h4 class="text-muted">Sim Approval</h4>
+			  		<div class="row">
+			  			<div class="col-sm-6">
+			  				<div id="sim-chart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+			  			</div>
+			  			<div class="col-sm-6">
+			  				<div id="sim-chart1" style="height: 400px;"></div>
+			  			</div>
+			  		</div>
+			  	</div>
+			  	<div class="well">
+			  		<h4 class="text-muted">Decisions</h4>
+			  		<div class="row">
+			  			<div class="col-sm-6">
+			  				<div id="decision-chart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+			  			</div>
+			  			<div class="col-sm-6">
+			  				<div id="decision-chart1" style="height: 400px;"></div>
+			  			</div>
+			  		</div>
+			  	</div>
+			  	<div class="well">
+			  		<h4 class="text-muted">Expiration</h4>
+			  		<div class="row">
+			  			<div class="col-sm-6">
+			  				
+			  			</div>
+			  			<div class="col-sm-6">
+			  				
 			  			</div>
 			  		</div>
 			  	</div>			  				    
 			  </div>
-			  <div id="boverview" class="tab-pane fade">		  	
+			  <div id="boverview" class="tab-pane fade">
+			  	<br>
+			  	<div class="well">
+			  		<h4>
+				  		<small>
+				  			<a href="#" class="text-muted" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." >
+				  				<i class="glyphicon glyphicon-info-sign"></i>
+				  			</a>
+				  		</small>
+			  			Event brief
+			  		</h4>
+			  		<p class="text-muted">
+			  			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			  		</p>
+			  	</div>
+			  	<div class="well">
+			  		<h4>Event</h4>
+			  		<a href="#" class="text-muted" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." >
+		  				<i class="glyphicon glyphicon-info-sign"></i>
+		  			</a>Event Name : <big> Test Event </big>
+			  	</div>
+			  	<div class="well">
+			  		<h4>
+				  		<small>
+				  			<a href="#" class="text-muted" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." >
+				  				<i class="glyphicon glyphicon-info-sign"></i>
+				  			</a>
+				  		</small>
+			  			Questionaries
+			  		</h4>
+			  		<div class="well">
+			  			<h5>Test Questions?</h5>
+			  			<span class="text-muted">Question Quantity: </span> 1 question<br>
+			  			<span class="text-muted">Scored: </span> Yes<br>
+			  			<span class="text-muted">Weighting: </span> per section
+			  		</div>
+			  	</div>
+
+			  	<div class="pull-right">
+			  		<button class="btn btn-primary">
+			  			Return to editing
+			  			<i class="glyphicon glyphicon-lock"></i>
+			  		</button>
+			  		<br><br>
+			  	</div> 	
 
 			  </div>
-			  <div id="bactions" class="tab-pane fade">		  	
-
+			  <div id="bactions" class="tab-pane fade">
+			  	<br>
+			  	<div class="row">
+			  		<div class="col-md-6">
+			  			<div class="well">
+			  				<h4 class="text-muted">Decisions</h4>
+			  				None
+			  			</div>
+			  			<div class="well">
+			  				<h4 class="text-muted">Pending Approval</h4>
+			  				None
+			  			</div>
+			  		</div>
+			  		<div class="col-md-6">
+			  			<div class="well">
+			  				<h4 class="text-muted">Scoring required</h4>
+			  				None
+			  			</div>
+			  			<div class="well">
+			  				<h4 class="text-muted">Decision required</h4>
+			  				None
+			  			</div>
+			  		</div>
+			  	</div>
 			  </div>
 			  <div id="bparticipant" class="tab-pane fade">		  	
+			  	<div class="bparticipant-top">
+			  		<button class="btn btn-default text-blue">
+			  			<i class="glyphicon glyphicon-plus"></i>
+			  			Add New Participant
+			  		</button>
+			  		<button class="btn btn-default text-blue pull-right">
+			  			<i class="glyphicon glyphicon-download"></i>
+			  			Download
+			  		</button>
+			  	</div>
+			  	<div>
+			  		<table class="table">
+			  			<thead class="text-capitalize">
+			  				<tr class="text-muted">
+			  					<th>decision</th>
+			  					<th>status</th>
+			  					<th>participant</th>
+			  					<th>questionaries</th>
+			  					<th>accepted invite</th>
+			  					<th>submited</th>
+			  					<th>scored</th>
+			  					<th>messages</th>
+			  					<th></th>
+			  				</tr>
+			  				<tr>
+			  					<th>
+			  						<select class="multi-select" multiple="multiple">
+			  							<option>In Progress</option>
+			  							<option>Approved</option>
+			  							<option>Rejected</option>
+									</select>
+			  					</th>
+			  					<th>
+			  						<select class="multi-select" multiple="multiple">
+			  							<option>Pending acceptance</option>
+			  							<option>Declined invite</option>
+			  							<option>Invalid email</option>
+			  							<option>Not submitted anything</option>
+			  							<option>Submission in progress</option>
+			  							<option>Submission not scored</option>
+			  							<option>Scoring in progress</option>
+			  							<option>Pending approvals</option>
+			  							<option>Decision requried</option>
+			  							<option>Onboarding complete</option>
+			  							<option>Expiring documents</option>
+			  							<option>Expired documents</option>
+			  							<option>Expiring questinaries</option>
+			  							<option>Exprired questionaries</option>
 
+									</select>
+			  					</th>
+			  					<th>
+			  						<input type="text" class="form-control" name="">
+			  					</th>
+			  					<th>
+			  						<select class="multi-select" multiple="multiple">
+			  							<option>Questions1</option>
+			  							<option>Questions2</option>
+			  							<option>Questions3</option>
+			  							<option>Questions4</option>
+			  							<option>Questions5</option>
+									</select>
+			  					</th>
+			  					<th>
+			  						<select class="multi-select" multiple="multiple">
+			  							<option>Yes</option>
+			  							<option>No</option>
+									</select>
+			  					</th>
+			  					<th></th>
+			  					<th></th>
+			  					<th></th>
+			  					<th>
+			  						<button class="btn btn-primary">
+			  							<i class="glyphicon glyphicon-search"></i>
+			  							Search
+			  						</button>
+			  					</th>
+			  				</tr>
+			  			</thead>
+			  			<tbody>
+			  				<tr>
+			  					<td colspan="7">
+			  						There are no records here
+			  					</td>
+			  				</tr>
+			  			</tbody>
+			  		</table>
+
+			  	</div>
 			  </div>
 			  <div id="bquestion" class="tab-pane fade">		  	
-
+			  	<br>
+			  	<div class="row">
+			  		<div class="col-sm-6">
+			  			<h5 class="text-muted">SECTION TITLE</h5>			  			
+			  		</div>
+			  		<div class="col-sm-6">
+			  			<h5>QUESTION TITLE</h5>
+			  		</div>
+			  	</div>
+			  	<div class="row">
+			  		<div class="col-sm-6">
+			  			<div class="well">
+			  				1) Section#1
+			  			</div>
+			  		</div>
+			  		<div class="col-sm-6">			  			
+			  			<div class="well">
+			  				1.1) Question #1<br>
+			  				1.2) Question #2<br>
+			  				1.3) Question #3
+			  			</div>
+			  		</div>
+			  	</div>
+			  	<div class="row">
+			  		<div class="col-sm-6">
+			  			<div class="well">
+			  				2) Section#1
+			  			</div>
+			  		</div>
+			  		<div class="col-sm-6">			  			
+			  			<div class="well">
+			  				2.1) Question #4<br>
+			  				2.2) Question #5<br>
+			  				2.3) Question #6
+			  			</div>
+			  		</div>
+			  	</div>
+			  	<hr>
+			  	<div>
+			  		<button class="btn btn-primary pull-right">
+			  			Return to editing
+			  			<i class="glyphicon glyphicon-lock"></i>
+			  		</button>
+			  	</div>
+			  	<br><br><br>
 			  </div>
 			</div>
 		</div>
