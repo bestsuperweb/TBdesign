@@ -50,6 +50,10 @@ $(document).ready(function(){
 		$('.multi-select').multiselect();
 	}
 
+	$('.sidebar-toggle').on('click', function () {
+         $('#sidebar').toggleClass('active');
+     });
+
 	// charts
 
 	if ($('#eventOverviewChart').length) {

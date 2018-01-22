@@ -212,6 +212,36 @@ div.pull-right.dropdown.open .item-count-dropdown{
 	margin: 20px auto;
 }
 
+/*---------Buyer Dashboard-----------*/
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    margin-top: -20px;
+}
+.sidebar-toggle{
+	padding: 9px;
+	margin-right: 25px;
+}
+.sidebar-toggle a:hover, .sidebar-toggle a:focus{
+	text-decoration: none;
+}
+#sidebar {
+    min-width: 350px;
+    max-width: 350px;
+    transition: all 0.3s;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    padding: 10px;
+}
+
+#sidebar.active {
+    margin-left: -320px;
+}
+
 
 /*------responsive------*/
 @media only screen and ( min-width:600px) and ( max-width:767px ){
@@ -255,4 +285,16 @@ div.pull-right.dropdown.open .item-count-dropdown{
 	    line-height: 28px;
 	    background-position: top center, bottom center;
 	}
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -320px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Requests | TendorBook</title>
+	<title>Activities | TendorBook</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon" />
@@ -92,32 +92,31 @@
 	<section>
 		<div class="container">
 			<ul class="nav nav-tabs">
-				<li class="active"><a data-toggle="pill" href="#requestsShowFolder">Show folders</a></li>
-				<li><a data-toggle="pill" href="#requestsActiveRequests">Active requests</a></li>
+				<li class="active"><a data-toggle="pill" href="#requrisitionsShowFilter">Show filters</a></li>
+				<li><a data-toggle="pill" href="#reqruisitionsActiveRequisitions">Active requisitions</a></li>
+				<li><a data-toggle="pill" href="#requisitionsArchivedRequisitions">Archived requisitions</a></li>
 				<li class="pull-right">
-					<div class="btn-group">
-					  <button type="button" class="btn btn-success">CREATE A NEW REQUEST </button>
-					  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-					    <span class="caret"></span>
-					  </button>
-					  <ul class="dropdown-menu" role="menu">
-					    <li><a href="#">New Request for Quotations</a></li>
-					    <li><a href="#">New Request for Information</a></li>
-					    <li><a href="#">New Reverse Auction</a></li>
-					  </ul>
-					</div>
+					<button class="btn btn-sm btn-success">
+						<i class="glyphicon glyphicon-plus"></i>
+						Access requisition web form
+					</button>
+					<button class="btn btn-sm btn-success">
+						<i class="glyphicon glyphicon-remove-sign"></i>
+						Clear Filters
+					</button>
+					
 				</li>
 			</ul>
 
 			<div class="tab-content">
-				<div id="requestsShowFolder" class="tab-pane fade in active">
+				<div id="requrisitionsShowFilter" class="tab-pane fade in active">
 					<br>
 					<div class="panel-group" id="accordion">
 					  <div class="panel panel-info">
 					    <div class="panel-heading">
 					      <h4 class="panel-title">
 					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-					        	Active requests
+					        	New
 					        	<small class="pull-right">
 					        		<i class="glyphicon glyphicon-triangle-bottom"></i>
 					        	</small>
@@ -133,49 +132,22 @@
 					      					<small class="text-muted">Name</small>
 					      				</th>
 					      				<th>
-					      					<small class="text-muted">Buyer and folder</small>
-					      				</th>
-					      				<th></th>
-					      				<th>
-					      					<small class="text-muted">
-					      						<i class="glyphicon glyphicon-send"></i> &nbsp;
-						      					<i class="glyphicon glyphicon-envelope"></i> &nbsp;
-						      					<i class="glyphicon glyphicon-edit"></i> &nbsp;
-						      					<i class="glyphicon glyphicon-usd"></i> &nbsp;
-						      				</small>
+					      					<small class="text-muted">Messages</small>
 					      				</th>
 					      				<th>
-					      					<small class="text-muted">Time left</small>
+					      					<small class="text-muted">Requisitioner</small>
 					      				</th>
 					      				<th>
-					      					<small class="text-muted">Savings</small>
+					      					<small class="text-muted">Delivery date</small>
 					      				</th>
-					      				<th></th>
 					      			</tr>
 					      		</thead>
 					      		<tbody>
 					      			<tr>
-					      				<td>#1 Chal Sacco Pre-qualification</td>
-					      				<td>
-					      					<i class="glyphicon glyphicon-folder-close"></i>&nbsp;&nbsp;rgder ndungu
-					      				</td>
-					      				<td>
-					      					<big><i class="glyphicon glyphicon-envelope"></i></big>
-					      					<small><span class="badge" style="vertical-align: top;">3</span></small>
-					      				</td>
-					      				<td>
-					      					<span class="label label-success">3</span>
-					      					<span class="label label-info">2</span>
-					      					<span class="label label-warning">1</span>
-					      					<span class="label label-danger">0</span>
-					      				</td>
-					      				<td>
-					      					<i class="glyphicon glyphicon-time"></i>&nbsp;
-					      					27d 8h 42m
-					      				</td>
-					      				<td></td>
-					      				<td>
-					      					<button class="btn btn-default btn-sm">View</button>
+					      				<td colspan="4">
+					      					<p class="text-muted">
+					      						There are no new requisitions.
+					      					</p>
 					      				</td>
 					      			</tr>
 					      		</tbody>
@@ -183,11 +155,11 @@
 					      </div>
 					    </div>
 					  </div>
-					  <div class="panel panel-info">
+					    <div class="panel panel-info">
 					    <div class="panel-heading">
 					      <h4 class="panel-title">
 					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-					        	Under review
+					        	Open
 					        	<small class="pull-right">
 					        		<i class="glyphicon glyphicon-triangle-bottom"></i>
 					        	</small>
@@ -203,40 +175,74 @@
 					      					<small class="text-muted">Name</small>
 					      				</th>
 					      				<th>
-					      					<small class="text-muted">Buyer and folder</small>
+					      					<small class="text-muted">Messages</small>
 					      				</th>
 					      				<th>
-					      					<small class="text-muted">
-					      						<i class="glyphicon glyphicon-send"></i> &nbsp;
-						      					<i class="glyphicon glyphicon-envelope"></i> &nbsp;
-						      					<i class="glyphicon glyphicon-edit"></i> &nbsp;
-						      					<i class="glyphicon glyphicon-usd"></i> &nbsp;
-						      				</small>
+					      					<small class="text-muted">Requisitioner</small>
 					      				</th>
 					      				<th>
-					      					<small class="text-muted">Time left</small>
+					      					<small class="text-muted">Delivery date</small>
 					      				</th>
-					      				<th></th>
+					      			</tr>
+					      		</thead>
+					      		<tbody>
+					      			<tr>
+					      				<td colspan="4">
+					      					<p class="text-muted">
+					      						There are no new requisitions.
+					      					</p>
+					      				</td>
+					      			</tr>
+					      		</tbody>
+					      	</table>
+					      </div>
+					    </div>
+					  </div>
+
+					    <div class="panel panel-info">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+					        	Returned
+					        	<small class="pull-right">
+					        		<i class="glyphicon glyphicon-triangle-bottom"></i>
+					        	</small>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapse3" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      	<table class="table">
+					      		<thead>
+					      			<tr>
+					      				<th>
+					      					<small class="text-muted">Name</small>
+					      				</th>
+					      				<th>
+					      					<small class="text-muted">Messages</small>
+					      				</th>
+					      				<th>
+					      					<small class="text-muted">Requisitioner</small>
+					      				</th>
+					      				<th>
+					      					<small class="text-muted">Delivery date</small>
+					      				</th>
 					      				<th></th>
 					      			</tr>
 					      		</thead>
 					      		<tbody>
 					      			<tr>
-					      				<td>#7 Bamburl Cement RFQ</td>
-					      				<td>
-					      					<i class="glyphicon glyphicon-folder-close"></i>&nbsp;&nbsp;rgder ndungu
-					      				</td>
-					      				<td>
-					      					<span class="label label-info">2</span>
-					      					<span class="label label-info">2</span>
-					      					<span class="label label-warning">1</span>
-					      					<span class="label label-warning">1</span>
-					      				</td>
-					      				<td>
-					      					<i class="glyphicon glyphicon-time"></i>&nbsp;
-					      					7d 0h 42m
-					      				</td>
+					      				<td>#1 laptop</td>
 					      				<td></td>
+					      				<td>
+					      					elvis njau
+					      				</td>
+					      				<td>
+					      					roger ndungu
+					      				</td>
+					      				<td>
+					      					Jan 26, 2018
+					      				</td>
 					      				<td>
 					      					<button class="btn btn-default btn-sm">View</button>
 					      				</td>
@@ -246,10 +252,19 @@
 					      </div>
 					    </div>
 					  </div>
+
 					</div>				   
 				</div>
-				<div id="requestsActiveRequests" class="tab-pane fade">
-				  <h3 class="text-success">Active requests</h3>
+				<div id="reqruisitionsActiveRequisitions" class="tab-pane fade">
+				  <h3 class="text-success">Active Rquisitions</h3>
+				  <div class="well">
+				  	<p class="text-muted">
+				  		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				  	</p>
+				  </div>				  
+				</div>
+				<div id="requisitionsArchivedRequisitions" class="tab-pane fade">
+				  <h3 class="text-success">Archived Rquisitions</h3>
 				  <div class="well">
 				  	<p class="text-muted">
 				  		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
