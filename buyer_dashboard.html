@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Requests | TendorBook</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/style/animate.min.css">
+	<link rel="stylesheet" href="assets/style/test-slider.css">
+	<link rel="stylesheet" href="assets/style/style.css">
+
+	<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/jquery.flexslider.js"></script>
+	<script src="assets/js/mousescroll.js"></script>
+	<script src="assets/js/js.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+				<a class="navbar-brand" href="#"><img src="assets/img/logo.png"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#">
+							<i class="glyphicon glyphicon-tasks"></i> Reguests
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="glyphicon glyphicon-list"></i> Requisitions
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="glyphicon glyphicon-user"></i> Suppliers
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="glyphicon glyphicon-star"></i> Activities
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="glyphicon glyphicon-envelope"></i> Messages
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="glyphicon glyphicon-stats"></i> Analytics
+						</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown" >
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+							<span class="glyphicon glyphicon-user"></span> 
+							Tenderbooks <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+							<li role="presentation"><a role="menuitem" href="#">Profile</a></li>
+							<li role="presentation"><a role="menuitem" href="#">Payments</a></li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation">
+								<a role="menuitem" href="#">
+									<span class="glyphicon glyphicon-log-out"></span> Log Out
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section>
+		<div class="container">
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="pill" href="#requestsShowFolder">Show folders</a></li>
+				<li><a data-toggle="pill" href="#requestsActiveRequests">Active requests</a></li>
+				<li class="pull-right">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-success">CREATE A NEW REQUEST </button>
+					  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li><a href="#">New Request for Quotations</a></li>
+					    <li><a href="#">New Request for Information</a></li>
+					    <li><a href="#">New Reverse Auction</a></li>
+					  </ul>
+					</div>
+				</li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="requestsShowFolder" class="tab-pane fade in active">
+					<br>
+					<div class="panel-group" id="accordion">
+					  <div class="panel panel-info">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+					        	Active requests
+					        	<small class="pull-right">
+					        		<i class="glyphicon glyphicon-triangle-bottom"></i>
+					        	</small>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapse1" class="panel-collapse collapse in">
+					      <div class="panel-body">
+					      	<table class="table">
+					      		<thead>
+					      			<tr>
+					      				<th>
+					      					<small class="text-muted">Name</small>
+					      				</th>
+					      				<th>
+					      					<small class="text-muted">Buyer and folder</small>
+					      				</th>
+					      				<th></th>
+					      				<th>
+					      					<small class="text-muted">
+					      						<i class="glyphicon glyphicon-send"></i> &nbsp;
+						      					<i class="glyphicon glyphicon-envelope"></i> &nbsp;
+						      					<i class="glyphicon glyphicon-edit"></i> &nbsp;
+						      					<i class="glyphicon glyphicon-usd"></i> &nbsp;
+						      				</small>
+					      				</th>
+					      				<th>
+					      					<small class="text-muted">Time left</small>
+					      				</th>
+					      				<th>
+					      					<small class="text-muted">Savings</small>
+					      				</th>
+					      				<th></th>
+					      			</tr>
+					      		</thead>
+					      		<tbody>
+					      			<tr>
+					      				<td>#1 Chal Sacco Pre-qualification</td>
+					      				<td>
+					      					<i class="glyphicon glyphicon-folder-close"></i>&nbsp;&nbsp;rgder ndungu
+					      				</td>
+					      				<td>
+					      					<big><i class="glyphicon glyphicon-envelope"></i></big>
+					      					<small><span class="badge" style="vertical-align: top;">3</span></small>
+					      				</td>
+					      				<td>
+					      					<span class="label label-success">3</span>
+					      					<span class="label label-info">2</span>
+					      					<span class="label label-warning">1</span>
+					      					<span class="label label-danger">0</span>
+					      				</td>
+					      				<td>
+					      					<i class="glyphicon glyphicon-time"></i>&nbsp;
+					      					27d 8h 42m
+					      				</td>
+					      				<td></td>
+					      				<td>
+					      					<button class="btn btn-default btn-sm">View</button>
+					      				</td>
+					      			</tr>
+					      		</tbody>
+					      	</table>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="panel panel-info">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+					        	Under review
+					        	<small class="pull-right">
+					        		<i class="glyphicon glyphicon-triangle-bottom"></i>
+					        	</small>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapse2" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      	<table class="table">
+					      		<thead>
+					      			<tr>
+					      				<th>
+					      					<small class="text-muted">Name</small>
+					      				</th>
+					      				<th>
+					      					<small class="text-muted">Buyer and folder</small>
+					      				</th>
+					      				<th>
+					      					<small class="text-muted">
+					      						<i class="glyphicon glyphicon-send"></i> &nbsp;
+						      					<i class="glyphicon glyphicon-envelope"></i> &nbsp;
+						      					<i class="glyphicon glyphicon-edit"></i> &nbsp;
+						      					<i class="glyphicon glyphicon-usd"></i> &nbsp;
+						      				</small>
+					      				</th>
+					      				<th>
+					      					<small class="text-muted">Time left</small>
+					      				</th>
+					      				<th></th>
+					      				<th></th>
+					      			</tr>
+					      		</thead>
+					      		<tbody>
+					      			<tr>
+					      				<td>#7 Bamburl Cement RFQ</td>
+					      				<td>
+					      					<i class="glyphicon glyphicon-folder-close"></i>&nbsp;&nbsp;rgder ndungu
+					      				</td>
+					      				<td>
+					      					<span class="label label-info">2</span>
+					      					<span class="label label-info">2</span>
+					      					<span class="label label-warning">1</span>
+					      					<span class="label label-warning">1</span>
+					      				</td>
+					      				<td>
+					      					<i class="glyphicon glyphicon-time"></i>&nbsp;
+					      					7d 0h 42m
+					      				</td>
+					      				<td></td>
+					      				<td>
+					      					<button class="btn btn-default btn-sm">View</button>
+					      				</td>
+					      			</tr>
+					      		</tbody>
+					      	</table>
+					      </div>
+					    </div>
+					  </div>
+					</div>				   
+				</div>
+				<div id="requestsActiveRequests" class="tab-pane fade">
+				  <h3 class="text-success">Active requests</h3>
+				  <div class="well">
+				  	<p class="text-muted">
+				  		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				  	</p>
+				  </div>				  
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container text-center">
+			<img src="assets/img/favicon.png" class="footer-logo">
+			<p class="text-blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div class="footer-navigation">
+				<a href="#">About Us</a> | 
+				<a href="#">Contact Us</a> | 
+				<a href="#">Privacy Policy</a> | 
+				<a href="#">Terms of Use</a>
+			</div>
+			<div class="social-icons">
+				<ul>
+					<li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li>
+					<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> 
+					<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+					<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a class="tumblr" href="#"><i class="fa fa-tumblr-square"></i></a></li>
+				</ul>
+			</div>
+			<div class="text-muted copyright">Copyright&copy;TendorBooks, All right reserved.</div>			
+		</div>
+	</footer>
+
+</body>
+</html>
+
+
+<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
