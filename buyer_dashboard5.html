@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Activities | TendorBook</title>
+	<title>Analytics | TendorBook</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="assets/img/favicon.png" rel="shortcut icon" type="image/x-icon" />
@@ -18,6 +18,8 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-3d.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/jquery.flexslider.js"></script>
 	<script src="assets/js/mousescroll.js"></script>
@@ -91,88 +93,136 @@
 
 	<section style="min-height: 60vh;">
 		<div class="container">
+			<h3 class="text-muted">
+				Overview of requests
+				<span class="pull-right">
+					<span class="dropdown">
+					  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+					  	<b class="text-muted">Buyer <span class="caret"></span></b>
+					  </button>
+					  <ul class="dropdown-menu">
+					    <li><a href="#">Buyer1</a></li>
+					    <li><a href="#">Buyer2</a></li>
+					    <li><a href="#">Buyer3</a></li>
+					  </ul>
+					</span>
+					<span class="dropdown">
+					  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+					  	<b class="text-muted">
+					  		<i class="glyphicon glyphicon-calendar"></i>
+							All of time <span class="caret"></span>
+						</b>
+					  </button>
+					  <ul class="dropdown-menu">
+					    <li><a href="#">Date</a></li>
+					    <li><a href="#">Month</a></li>
+					    <li><a href="#">Year</a></li>
+					  </ul>
+					</span>
+				</span>
+			</h3>
+			<hr>
 			<div class="row">
-				<div class="col-md-8">
-					<div class="btn-group btn-group-sm">
-					  <button type="button" class="btn btn-default">
-					  	<b class="text-muted">All</b>
-					  </button>
-					  <button type="button" class="btn btn-default">
-					  	<b class="text-muted">
-					  		<i class="glyphicon glyphicon-list"></i>
-					  		Notes
-					  	</b>
-					  </button>
-					  <button type="button" class="btn btn-default">
-					  	<b class="text-muted">
-						  	<i class="glyphicon glyphicon-earphone"></i>
-						  	Calls
-						</b>
-					  </button>
-					  <button type="button" class="btn btn-default">
-					  	<b class="text-muted">
-						  	<i class="glyphicon glyphicon-envelope"></i>
-						  	E-mails
-						</b>
-					  </button>
-					  <button type="button" class="btn btn-default">
-					  	<b class="text-muted">
-						  	<i class="glyphicon glyphicon-comment"></i>
-						  	Chats
-						</b>
-					  </button>
-					  <button type="button" class="btn btn-default">
-					  	<b class="text-muted">
-						  	<i class="glyphicon glyphicon-user"></i>
-						  	Meetings
-						</b>
-					  </button>
-					  <button type="button" class="btn btn-default">
-					  	<b class="text-muted">
-						  	<i class="glyphicon glyphicon-credit-card"></i>
-						  	Contracts
-						</b>
-					  </button>
-					  <button type="button" class="btn btn-default">
-					  	<b class="text-muted">
-						  	<i class="glyphicon glyphicon-folder-open"></i>
-						  	Documents
-						</b>
-					  </button>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<button class="btn btn-default btn-sm">
-						<b class="text-muted">
-							<i class="glyphicon glyphicon-user"></i>
-							VISIBLE TO COMPANY
-						</b>
-					</button>
-					<button class="btn btn-default btn-sm">
-						<b class="text-muted">
-							<i class="glyphicon glyphicon-calendar"></i>
-							ALL OF TIME
-						</b>
-					</button>
-				</div>
+				<div class="col-md-2">
+					<select class="form-control input-sm">
+						<option>Option1</option>
+						<option>Option2</option>
+						<option>Option3</option>
+					</select>
+				</div>		
+				<div class="col-md-10">
+					<span class="pull-right">
+						<button class="btn btn-default btn-sm">Day</button>
+						<button class="btn btn-default btn-sm">Week</button>
+						<button class="btn btn-default btn-sm">Month</button>
+					</span>
+				</div>				
+			</div>
+			<div id="report-chart">				
+			</div>
+			<div>
+				<button class="btn btn-default btn-sm">
+					<b class="text-muted">
+						<i class="glyphicon glyphicon-stats"></i>
+						Breakdown
+					</b>					
+				</button>
+				<button class="btn btn-default btn-sm">
+					<b class="text-muted">
+						<i class="glyphicon glyphicon-stats"></i>
+						Comparisoin
+					</b>					
+				</button>
 			</div>
 			<hr>
 			<div>
-				<table class="table">
+				<table class="table table-bordered">
 					<thead>
 						<tr class="text-muted bg-info">
-							<th><small>Type</small></th>
-							<th><small>Name</small></th>
-							<th><small>Supplier</small></th>
-							<th><small>Date</small></th>
-							<th><small>Owner</small></th>
+							<td>
+								<small>Requests by buyers</small>
+							</td>
+							<td>
+								<small>
+									Under registeration
+									<a href="#" class="text-muted" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." >
+						  				<i class="glyphicon glyphicon-info-sign"></i>
+						  			</a>
+								</small>
+							</td>
+							<td>
+								<small>
+									Active
+									<a href="#" class="text-muted" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." >
+						  				<i class="glyphicon glyphicon-info-sign"></i>
+						  			</a>
+								</small>
+							</td>
+							<td>
+								<small>
+									Bid closed
+									<a href="#" class="text-muted" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." >
+						  				<i class="glyphicon glyphicon-info-sign"></i>
+						  			</a>
+								</small>
+							</td>
+							<td>
+								<small>
+									Completed
+									<a href="#" class="text-muted" data-toggle="tooltip" data-placement="bottom" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." >
+						  				<i class="glyphicon glyphicon-info-sign"></i>
+						  			</a>
+								</small>
+							</td>
+							<td>
+								<small>Total</small>
+							</td>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td colspan="5">
-								There are no activities...
+							<td>Roger Ndungu</td>
+							<td><h3 class="text-center">3</h3></td>
+							<td>
+								<h3 class="text-center">1</h3>
+								<span class="text-muted">67%</span>
+								<span class="pull-right text-muted">33%</span>
 							</td>
+							<td></td>
+							<td></td>
+							<td><h3 class="text-center" >4</h3></td>
+						</tr>
+						<tr>
+							<td>Roger Ndungu</td>
+							<td><h3 class="text-center">3</h3></td>
+							<td>
+								<h3 class="text-center">1</h3>
+								<span class="text-muted">67%</span>
+								<span class="pull-right text-muted">33%</span>
+							</td>
+							<td></td>
+							<td></td>
+							<td><h3 class="text-center" >4</h3></td>
 						</tr>
 					</tbody>
 				</table>
