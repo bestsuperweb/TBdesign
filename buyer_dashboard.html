@@ -91,8 +91,8 @@
 	<section style="min-height: 60vh;">
 		<div class="container">
 			<ul class="nav nav-tabs">
-				<li class="active"><a data-toggle="pill" href="#requestsShowFolder">Show folders</a></li>
-				<li><a data-toggle="pill" href="#requestsActiveRequests">Active requests</a></li>
+				<li><a id="showFolders" href="#">Show folders</a></li>
+				<li class="active"><a data-toggle="pill" href="#requestsActiveRequests">Active requests</a></li>
 				<li class="pull-right">
 					<div class="btn-group">
 					  <button type="button" class="btn btn-success">CREATE A NEW REQUEST </button>
@@ -108,9 +108,50 @@
 				</li>
 			</ul>
 
+			<div id="sidebar-menu">
+				<h4 class="text-muted">
+					Filter requests
+					<span class="pull-right"><a id="hideFolders" class="btn btn-blue btn-xs" href="#">
+						<i class="glyphicon glyphicon-triangle-left"></i>
+					</a></span>
+				</h4>
+				<hr>
+				<h5 class="text-muted">
+					Folders
+					<span class="pull-right">
+						<button class="btn btn-default btn-xs">
+							<i class="glyphicon glyphicon-plus"></i>
+							Create folder
+						</button>
+						<button class="btn btn-default btn-xs">Edit folders</button>
+					</span>
+				</h5>
+				<hr>
+				<div class="input-group">
+					<input type="text" class="form-control" name="email" value="roger ndungu">
+					<span class="input-group-addon">8</span>					
+				</div>
+				<hr>
+				<h5>Status</h5>
+				<hr>
+				<div class="input-group">
+					<input type="text" class="form-control" name="email" value="Active requests">
+					<span class="input-group-addon">2</span>					
+				</div>
+				<hr>
+				<div class="input-group">
+					<input type="text" class="form-control" name="email" value="Under registeration">
+					<span class="input-group-addon">6</span>					
+				</div>
+				<hr>
+				<h5>Date</h5>
+				<hr>
+				<input type="text" class="form-control" value="Click here to choose a period" name="">
+			</div>
+
 			<div class="tab-content">
-				<div id="requestsShowFolder" class="tab-pane fade in active">
-					<br>
+				<div id="requestsActiveRequests" class="tab-pane fade in active">
+				  <br>
 					<div class="panel-group" id="accordion">
 					  <div class="panel panel-info">
 					    <div class="panel-heading">
@@ -245,15 +286,7 @@
 					      </div>
 					    </div>
 					  </div>
-					</div>				   
-				</div>
-				<div id="requestsActiveRequests" class="tab-pane fade">
-				  <h3 class="text-success">Active requests</h3>
-				  <div class="well">
-				  	<p class="text-muted">
-				  		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				  	</p>
-				  </div>				  
+					</div>				  
 				</div>
 			</div>
 		</div>

@@ -8,6 +8,18 @@
 	background-color: #09a3e0;
 	color: #fff;
 }
+/*.bg-info{
+	background-color: #09a3e0;
+}
+.text-info{
+	color: #09a3e0;
+}
+.panel-info>.panel-heading{
+	background-color: #09a3e0;
+}
+.btn-info{
+	background-color: #09a3e0;
+}*/
 .bg-gray{
 	background-color: #f8f8f8;
 }
@@ -246,6 +258,25 @@ div.pull-right.dropdown.open .item-count-dropdown{
 	margin: 0 auto;
 }
 
+
+#sidebar-menu{
+	display: block;
+    width: 300px;
+    height: 100%;
+    max-height: 100%;
+    position: fixed;
+    top: 72px;
+    /*box-shadow: 0 0 0 0 rgba(0,0,0,.14), 0 10px 15px 8px rgba(0,0,0,.2), 0 0 0 0 rgba(0,0,0,.12);*/
+    box-sizing: border-box;
+    border-right: 1px solid #e0e0e0;
+    transition: all .5s ease;
+    color: #424242;
+    overflow: hidden;
+    z-index: 40;
+    background: #f7f7f7;
+    padding: 10px;
+    left: -350px;
+}
 /*------responsive------*/
 @media only screen and ( min-width:600px) and ( max-width:767px ){
 	.testimonial-heading h1{

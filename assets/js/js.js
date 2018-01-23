@@ -54,6 +54,16 @@ $(document).ready(function(){
          $('#sidebar').toggleClass('active');
      });
 
+	$('#showFolders').click(function(event) {
+		/* Act on the event */
+		$('#sidebar-menu').css('left', '0');
+	});
+
+	$('#hideFolders').click(function(event) {
+		/* Act on the event */
+		$('#sidebar-menu').css('left', '-350px');
+	});
+
 	// charts
 
 	if ($('#report-chart').length) {
