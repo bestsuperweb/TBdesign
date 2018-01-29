@@ -28,8 +28,8 @@
 }
 .dropdown-menu{
 	transition: all .5s ease;
-	left: initial;
-	right: 0;
+	/*left: initial;
+	right: 0;*/
 }
 
 /*----- navbar ------*/
@@ -258,7 +258,7 @@ div.pull-right.dropdown.open .item-count-dropdown{
 }
 #report-chart {
 	height: 500px;
-	margin: 0 auto;
+	margin: 10px auto;
 }
 
 
@@ -327,6 +327,7 @@ div.pull-right.dropdown.open .item-count-dropdown{
 @media (max-width: 768px) {
     #sidebar {
         margin-left: -330px;
+        margin-right: 10px;
     }
     #sidebar.active {
         margin-left: 0;
@@ -334,6 +335,13 @@ div.pull-right.dropdown.open .item-count-dropdown{
     #sidebarCollapse span {
         display: none;
     }
+    div#contacts, div#suppliers{
+    	width: calc( 100vw - 20px );
+    }
+    div#report-chart {
+		height: 300px;		
+	}
+
 }
 
 @media only screen and (max-width: 768px){
