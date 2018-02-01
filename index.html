@@ -69,7 +69,12 @@
 			<div class="text-center home-banner">
 				<h1>It’s About Time You Kick Out The Old Tender Box At Your Reception</h1>
 				<p class="text-blue">Tenderbooks is a Supplier information management solution that helps you meet the rising challenges of managing supplier risk & compliance by Automating the supplier pre-qualification process to help you run a <b>Paperless pre-qualification & evaluation process.</b></p>
-				<div id="myCarousel" class="carousel slide wow fadeInUp" data-ride="carousel">
+				<video width="80%" height="auto" autoplay="true" style="border: 10px solid white; box-shadow: 0 0 15px grey;" class="wow fadeInUp" >
+				  <source src="https://www.dropbox.com/s/kverzfo8lkrf56s/export.mp4?raw=1" type="video/mp4">
+				  <source src="https://www.dropbox.com/s/kverzfo8lkrf56s/export.mp4?raw=1" type="video/ogg">
+				Your browser does not support the video tag.
+				</video>
+				<!-- <div id="myCarousel" class="carousel slide wow fadeInUp" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="item active">
 							<img src="assets/img/home/banner.png">
@@ -83,10 +88,16 @@
 							<img src="assets/img/home/banner.png">
 						</div>
 					</div>
-				</div>			
+				</div>	 -->		
 			</div>
 		</div>
 	</section>
+
+	<script type="text/javascript">
+		var videoFile = 'https://www.dropbox.com/s/kverzfo8lkrf56s/export.mp4';
+		$('#container video source').attr('src', videoFile);
+		$("#container video")[0].load();
+	</script>
 
 	<section class="home-companies">
 		<div class=" container text-center">
